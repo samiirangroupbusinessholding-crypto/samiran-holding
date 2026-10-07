@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سامیران هولدینگ - تجارت و بازرگانی بین‌المللی">
+    <meta name="keywords" content="هولدینگ، تجارت، صادرات، واردات، خودرو، طلا، جواهرات، ساخت‌وساز">
+    <title>سامیران هولدینگ | تجارت و بازرگانی بین‌المللی</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header و Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #1a1a2e;
+            padding: 12px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background-color: #ffed4e;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 2;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        /* Divisions Section */
+        .divisions {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .divisions h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .division-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .division-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .division-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        .division-number {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #1a1a2e;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .division-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .division-title-en {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .division-content {
+            padding: 25px;
+        }
+
+        .division-activities {
+            margin-bottom: 20px;
+        }
+
+        .division-activities h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .division-activities ul {
+            list-style: none;
+            padding-right: 20px;
+        }
+
+        .division-activities li:before {
+            content: "✓ ";
+            color: #ffd700;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .division-activities li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .division-description {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #666;
+            border-right: 3px solid #ffd700;
+        }
+
+        .division-contact {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .division-contact h5 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .contact-icon {
+            margin-left: 10px;
+            color: #ffd700;
+            font-weight: bold;
+            min-width: 30px;
+        }
+
+        .contact-item a {
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-box h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .contact-box a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .values h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .value-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .value-item h4 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .value-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about h2, .divisions h2, .contact-section h2, .values h2 {
+                font-size: 28px;
+            }
+
+            .division-card {
+                margin-bottom: 20px;
+            }
+
+            .divisions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .division-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .contact-box {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #1a1a2e;
+            color: #ffd700;
+            padding: 15px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🏢 سامیران هولدینگ</div>
+                <ul>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#divisions">زیرمجموعه‌ها</a></li>
+                    <li><a href="#values">ارزش‌ها</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>سامیران هولدینگ</h1>
+            <p>متخصص در تجارت بین‌المللی، خودروپروی، فلزات گرانبها، بازیافت و ساخت‌وساز</p>
+            <a href="#contact" class="cta-button">تماس با ما</a>
+            <a href="#divisions" class="cta-button">معرفی زیرمجموعه‌ها</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>درباره سامیران هولدینگ</h2>
+            <div class="about-content">
+                <p>
+                    سامیران هولدینگ به عنوان یک هولدینگ فعال در حوزه‌های متنوع از جمله تجارت بین‌المللی، خودروپروی، فلزات گرانبها، بازیافت و صنایع، ساخت‌وساز و صنعتی، با تمرکز بر توسعه کسب‌وکارهای زیرمجموعه‌ای، در تلاش است تا یک زنجیره ارزش قوی و پایدار در بازارهای داخلی و بین‌المللی ایجاد کند.
+                </p>
+                <br>
+                <p>
+                    هدف اصلی هولدینگ، یکپارچه‌سازی توانمندی‌های کسب‌وکارهای زیرمجموعه، افزایش بهره‌وری، گسترش روابط تجاری و تقویت حضور در بازارهای جهانی است. ما معتقدیم که از طریق همکاری هم‌افزایی و تمرکز بر کیفیت و نوآوری، می‌توانیم برای مشتریان و شراکاء خود ارزش فوق‌العاده‌ای ایجاد کنیم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisions Section -->
+    <section class="divisions" id="divisions">
+        <div class="container">
+            <h2>زیرمجموعه‌های هولدینگ</h2>
+            <div class="divisions-grid">
+                <!-- Division 1 -->
+                <div class="division-card">
+                    <div class="division-header">
+                        <div class="division-number">1️⃣</div>
+                        <div class="division-title">سامیران تجارت بین‌الملل</div>
+                        <div class="division-title-en">Samiran International Trade</div>
+                    </div>
+                    <div class="division-content">
+                        <div class="division-activities">
+                            <h4>حوزه فعالیت:</h4>
+                            <ul>
+                                <li>واردات و صادرات کالاهای صنعتی و مصرفی</li>
+                                <li>تامین منابع بین‌المللی</li>
+                                <li>تجارت جهانی و توسعه بازارهای نوظهور</li>
+                            </ul>
+                        </div>
+                        <div class="division-description">
+                            این واحد به‌عنوان قلب تجارت هولدینگ، با ایجاد ارتباطات تجاری میان تامین‌کنندگان و بازارهای هدف، در توسعه تجارت خارجی و مدیریت زنجیره تأمین نقش کلیدی دارد.
+                        </div>
+                        <div class="division-contact">
+                            <h5>راه‌های ارتباطی:</h5>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span><a href="tel:09193018462">09193018462</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✈️</span>
+                                <span><a href="https://t.me/Samii_holding" target="_blank">@Samii_holding</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span><a href="mailto:info@samiranholding.com">info@samiranholding.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 2 -->
+                <div class="division-card">
+                    <div class="division-header">
+                        <div class="division-number">2️⃣</div>
+                        <div class="division-title">اتو سامیران</div>
+                        <div class="division-title-en">Auto Samiran</div>
+                    </div>
+                    <div class="division-content">
+                        <div class="division-activities">
+                            <h4>حوزه فعالیت:</h4>
+                            <ul>
+                                <li>خرید و فروش خودروهای داخلی و خارجی</li>
+                                <li>گذر موقت واردات خودرو</li>
+                                <li>واردات لوازم یدکی و افتر مارکتینگ</li>
+                                <li>خدمات پس از فروش</li>
+                            </ul>
+                        </div>
+                        <div class="division-description">
+                            این زیرمجموعه با تخصص در حوزه خودروپروی، فعالیت‌های وسیعی در زمینه واردات، توزیع و فروش خودرو و لوازم یدکی برای بازار داخلی دارد.
+                        </div>
+                        <div class="division-contact">
+                            <h5>راه‌های ارتباطی:</h5>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span><a href="tel:09193018462">09193018462</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✈️</span>
+                                <span><a href="https://t.me/Samii_holding" target="_blank">@Samii_holding</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span><a href="mailto:auto@samiranholding.com">auto@samiranholding.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 3 -->
+                <div class="division-card">
+                    <div class="division-header">
+                        <div class="division-number">3️⃣</div>
+                        <div class="division-title">سامی‌گلد</div>
+                        <div class="division-title-en">Samigold</div>
+                    </div>
+                    <div class="division-content">
+                        <div class="division-activities">
+                            <h4>حوزه فعالیت:</h4>
+                            <ul>
+                                <li>فروش و توزیع شمش طلای آب‌شده</li>
+                                <li>شمش نقره و ساچمه نقره</li>
+                                <li>جواهرات کالکشنی و دست‌ساز</li>
+                                <li>طلایکاری و پروسس‌های حرفه‌ای</li>
+                            </ul>
+                        </div>
+                        <div class="division-description">
+                            سامی‌گلد به‌عنوان متخصص حوزه فلزات گرانبها و جواهرات، با تمرکز بر کیفیت بالا و طراحی‌های منحصر به‌فرد، نقش مهمی در بازار لوکس دارد.
+                        </div>
+                        <div class="division-contact">
+                            <h5>راه‌های ارتباطی:</h5>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span><a href="tel:09207037905">09207037905</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✈️</span>
+                                <span><a href="https://t.me/samiiranGroupbusinessholding" target="_blank">@samiiranGroupbusinessholding</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🌐</span>
+                                <span><a href="https://www.samigold.com" target="_blank">www.samigold.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 4 -->
+                <div class="division-card">
+                    <div class="division-header">
+                        <div class="division-number">4️⃣</div>
+                        <div class="division-title">ایران ذوب</div>
+                        <div class="division-title-en">Iran Smelting & Recycling</div>
+                    </div>
+                    <div class="division-content">
+                        <div class="division-activities">
+                            <h4>حوزه فعالیت:</h4>
+                            <ul>
+                                <li>خرید ضایعات و تفکیک فلزات</li>
+                                <li>فروش شمش‌های آلومینیوم و مس</li>
+                                <li>بازیافت فلزات و مدیریت پسماند</li>
+                                <li>تامین مواد اولیه برای صنایع</li>
+                            </ul>
+                        </div>
+                        <div class="division-description">
+                            ایران ذوب با تمرکز بر بازیافت فلزات ثمین و صنعتی، خدمات حرفه‌ای در زمینه تفکیک و تولید شمش‌های با کیفیت ارائه می‌دهد.
+                        </div>
+                        <div class="division-contact">
+                            <h5>راه‌های ارتباطی:</h5>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span><a href="tel:09193018462">09193018462</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✈️</span>
+                                <span><a href="https://t.me/Samii_holding" target="_blank">@Samii_holding</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span><a href="mailto:info@iransmelting.com">info@iransmelting.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 5 -->
+                <div class="division-card">
+                    <div class="division-header">
+                        <div class="division-number">5️⃣</div>
+                        <div class="division-title">مجموعه ساختمانی پرشین</div>
+                        <div class="division-title-en">Persian Building Group</div>
+                    </div>
+                    <div class="division-content">
+                        <div class="division-activities">
+                            <h4>حوزه فعالیت:</h4>
+                            <ul>
+                                <li>ساخت و فروش مجموعه‌های تجاری و مسکونی</li>
+                                <li>پروژه‌های ویلایی و آپارتمانی</li>
+                                <li>ساخت مجموعه‌های اداری</li>
+                                <li>طراحی و مشاوره ساختمانی</li>
+                            </ul>
+                        </div>
+                        <div class="division-description">
+                            مجموعه ساختمانی پرشین با تجربه چندین دهه در حوزه ساخت‌وساز، پروژه‌های با کیفیت و معماری منطبق با استانداردهای جهانی را پیاده‌سازی می‌کند.
+                        </div>
+                        <div class="division-contact">
+                            <h5>راه‌های ارتباطی:</h5>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span><a href="tel:09207037905">09207037905</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✈️</span>
+                                <span><a href="https://t.me/samiiranGroupbusinessholding" target="_blank">@samiiranGroupbusinessholding</a></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🌐</span>
+                                <span><a href="https://www.persianbuilding.com" target="_blank">www.persianbuilding.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" id="values">
+        <div class="container">
+            <h2>ارزش‌های هولدینگ</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">✨</div>
+                    <h4>اعتماد و شفافیت</h4>
+                    <p>ارتباطات پایدار و صادقانه با تمام متعاملین و شراکاء</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌱</div>
+                    <h4>توسعه پایدار</h4>
+                    <p>رشد طولانی‌مدت با توجه به مسئولیت‌های اجتماعی و محیطی</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌍</div>
+                    <h4>تجارت جهانی</h4>
+                    <p>حضور فعال در بازارهای بین‌المللی و شبکه‌های تجاری</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h4>همکاری و هم‌افزایی</h4>
+                    <p>تعاون نزدیک بین واحدهای مختلف برای دستیابی به اهداف مشترک</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💎</div>
+                    <h4>کیفیت و نوآوری</h4>
+                    <p>تمرکز بر تحقق استانداردهای بالا و بهبود مستمر</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">⚡</div>
+                    <h4>کارایی و سرعت</h4>
+                    <p>پاسخگویی سریع و انجام دقیق کارها با بهترین شیوه‌ها</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>تماس با ما</h2>
+            
+            <h3 style="text-align: center; margin-bottom: 30px; color: #1a1a2e;">جدول خلاصه اطلاعات تماس</h3>
+            <table style="max-width: 100%; overflow-x: auto; display: block;">
+                <thead>
+                    <tr>
+                        <th>نام واحد</th>
+                        <th>تلفن</th>
+                        <th>تلگرام</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>سامیران تجارت بین‌الملل</td>
+                        <td><a href="tel:09193018462" style="color: #1a1a2e;">09193018462</a></td>
+                        <td><a href="https://t.me/Samii_holding" target="_blank" style="color: #1a1a2e;">@Samii_holding</a></td>
+                    </tr>
+                    <tr>
+                        <td>اتو سامیران</td>
+                        <td><a href="tel:09193018462" style="color: #1a1a2e;">09193018462</a></td>
+                        <td><a href="https://t.me/Samii_holding" target="_blank" style="color: #1a1a2e;">@Samii_holding</a></td>
+                    </tr>
+                    <tr>
+                        <td>سامی‌گلد</td>
+                        <td><a href="tel:09207037905" style="color: #1a1a2e;">09207037905</a></td>
+                        <td><a href="https://t.me/samiiranGroupbusinessholding" target="_blank" style="color: #1a1a2e;">@samiiranGroupbusinessholding</a></td>
+                    </tr>
+                    <tr>
+                        <td>ایران ذوب</td>
+                        <td><a href="tel:09193018462" style="color: #1a1a2e;">09193018462</a></td>
+                        <td><a href="https://t.me/Samii_holding" target="_blank" style="color: #1a1a2e;">@Samii_holding</a></td>
+                    </tr>
+                    <tr>
+                        <td>مجموعه ساختمانی پرشین</td>
+                        <td><a href="tel:09207037905" style="color: #1a1a2e;">09207037905</a></td>
+                        <td><a href="https://t.me/samiiranGroupbusinessholding" target="_blank" style="color: #1a1a2e;">@samiiranGroupbusinessholding</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>هولدینگ مادر</strong></td>
+                        <td><a href="tel:09207037905" style="color: #1a1a2e;"><strong>09207037905</strong></a></td>
+                        <td><a href="https://t.me/samiiranGroupbusinessholding" target="_blank" style="color: #1a1a2e;"><strong>@samiiranGroupbusinessholding</strong></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 50px;">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #1a1a2e;">تماس مستقیم با دفتر مرکزی</h3>
+                <div class="contact-grid">
+                    <div class="contact-box">
+                        <h4>📞 تلفن</h4>
+                        <p><a href="tel:09207037905">09207037905</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>✈️ تلگرام</h4>
+                        <p><a href="https://t.me/samiiranGroupbusinessholding" target="_blank">@samiiranGroupbusinessholding</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>📧 ایمیل</h4>
+                        <p><a href="mailto:info@samiranholding.com">info@samiranholding.com</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>💬 واتساپ</h4>
+                        <p><a href="https://wa.me/989207037905" target="_blank">09207037905</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-top: 30px; text-align: center;">
+                <h4 style="color: #1a1a2e; margin-bottom: 15px;">ساعت کاری</h4>
+                <p style="color: #666; font-size: 16px;">شنبه تا چهارشنبه: ۹:۰۰ صبح تا ۶:۰۰ عصر</p>
+                <p style="color: #666; font-size: 14px;">پنج‌شنبه و جمعه: تعطیل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>درباره هولدینگ</h4>
+                <p>سامیران هولدینگ متخصص در تجارت بین‌المللی، خودروپروی، فلزات گرانبها و ساخت‌وساز است.</p>
+            </div>
+            <div class="footer-section">
+                <h4>زیرمجموعه‌ها</h4>
+                <p>✓ سامیران تجارت بین‌الملل</p>
+                <p>✓ اتو سامیران</p>
+                <p>✓ سامی‌گلد</p>
+                <p>✓ ایران ذوب</p>
+                <p>✓ مجموعه ساختمانی پرشین</p>
+            </div>
+            <div class="footer-section">
+                <h4>تماس سریع</h4>
+                <p><strong>تلفن:</strong> <a href="tel:09207037905">09207037905</a></p>
+                <p><strong>تلگرام:</strong> <a href="https://t.me/samiiranGroupbusinessholding" target="_blank">@samiiranGroupbusinessholding</a></p>
+                <p><strong>ایمیل:</strong> <a href="mailto:info@samiranholding.com">info@samiranholding.com</a></p>
+            </div>
+        </div>
+        <div class="footer-divider">
+            <p>&copy; ۲۰۲۶ سامیران هولدینگ. تمام حقوق محفوظ است.</p>
+            <p>طراحی و توسعه توسط <strong>سامیران هولدینگ</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation to division cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.division-card, .contact-box, .value-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
